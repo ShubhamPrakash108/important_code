@@ -1,0 +1,17 @@
+def viewing_random_data:
+  fig = plt.figure(figsize=(6,6)) 
+  rows = 3
+  columns = 4
+
+
+  for i, image_filename in enumerate(os.listdir(path)):
+
+    first_img_path = os.listdir(os.path.join(path, image_filename))[0]
+    first_image = imread(os.path.join(path, image_filename, first_img_path))
+    fig.add_subplot(rows, columns, i+1) 
+    plt.axis('off') 
+    plt.imshow(first_image)
+    plt.title('{}'.format(image_filename, fontsize=10))
+
+  plt.tight_layout()
+  plt.show()
