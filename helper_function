@@ -1,4 +1,4 @@
-def viewing_random_data:
+def viewing_random_data(path):
   fig = plt.figure(figsize=(6,6)) 
   rows = 3
   columns = 4
